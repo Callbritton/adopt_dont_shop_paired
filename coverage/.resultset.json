@@ -1,7 +1,107 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/environment.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/spec_helper.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +110,7 @@
           1
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/application.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/application.rb": {
         "lines": [
           1,
           null,
@@ -47,7 +147,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/boot.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -55,7 +155,7 @@
           1
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/environments/test.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -105,7 +205,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/application_controller_renderer.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -117,7 +217,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/assets.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -135,7 +235,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/backtrace_silencers.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -146,7 +246,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/content_security_policy.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -175,7 +275,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/cookies_serializer.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -184,7 +284,7 @@
           1
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/filter_parameter_logging.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -192,7 +292,7 @@
           1
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/inflections.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -212,7 +312,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/mime_types.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -220,7 +320,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/initializers/wrap_parameters.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -238,7 +338,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/config/routes.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -262,143 +362,13 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/helpers/application_helper.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/pets/edit_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/pets/index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/pets/new_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/pets/show_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/pets/edit_spec.rb": {
         "lines": [
           1,
           null,
@@ -418,6 +388,136 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/pets/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/pets/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/pets/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
           1,
@@ -427,7 +527,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/delete_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/delete_spec.rb": {
         "lines": [
           1,
           null,
@@ -450,7 +550,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/edit_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/edit_spec.rb": {
         "lines": [
           1,
           null,
@@ -481,7 +581,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/index_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/index_spec.rb": {
         "lines": [
           1,
           1,
@@ -530,7 +630,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/new_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/new_spec.rb": {
         "lines": [
           1,
           null,
@@ -556,7 +656,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/pets_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/pets_spec.rb": {
         "lines": [
           1,
           null,
@@ -589,7 +689,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/features/shelters/show_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/show_spec.rb": {
         "lines": [
           1,
           null,
@@ -626,7 +726,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/models/pet_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/models/pet_spec.rb": {
         "lines": [
           1,
           null,
@@ -649,13 +749,12 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/models/pet.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/models/pet.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          null,
           null,
           1,
           null,
@@ -666,14 +765,14 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/models/application_record.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/spec/models/shelter_spec.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/models/shelter_spec.rb": {
         "lines": [
           1,
           null,
@@ -705,7 +804,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/models/shelter.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/models/shelter.rb": {
         "lines": [
           1,
           1,
@@ -713,7 +812,7 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/controllers/pets_controller.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/controllers/pets_controller.rb": {
         "lines": [
           1,
           null,
@@ -758,13 +857,13 @@
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/controllers/application_controller.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/cla/turing/2module/projects/adopt_dont_shop/app/controllers/shelters_controller.rb": {
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/controllers/shelters_controller.rb": {
         "lines": [
           1,
           1,
@@ -811,6 +910,6 @@
         ]
       }
     },
-    "timestamp": 1598306655
+    "timestamp": 1598312274
   }
 }
