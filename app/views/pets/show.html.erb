@@ -1,0 +1,15 @@
+<h1><%=@pet.name %></h1>
+<p><%= image_tag(@pet.image) %></p>
+<p>Description: <%= @pet.description %></p>
+<p>Approximate Age: <%= @pet.approximate_age %></p>
+<p>Sex: <%= @pet.sex %></p>
+<p>Adoption Status: <%= @pet.adoption_status %></p>
+
+<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
+<br>
+<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+<br>
+<br>
+<a href="/pets">Return to Pet Index</a>
+<br>
+<a href="/">Return to Home</a>
