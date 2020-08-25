@@ -64,3 +64,5 @@ pet_6 = shelter_3.pets.create!(image: "https://cinefex.com/backissues/covers/Cin
                               approximate_age: 6,
                               sex: "female",
                               adoption_status: "available")
+
+# review_1 = shelter_2.reviews.create!(title: "This place is great!", rating: "5", content: "We found our puppy love", picture: "This is a picture")
