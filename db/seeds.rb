@@ -37,7 +37,7 @@ pet_2 = shelter_1.pets.create!(image: "https://usercontent1.hubstatic.com/208842
                               sex: "male",
                               adoption_status: "available")
 
-pet_3 = shelter_2.pets.create!(image: "https://wallpapersgood.com/resize/960x800/wallpapers/main2/201645/moana-moana-heihei-hej-hej.jpg ",
+pet_3 = shelter_2.pets.create!(image: "https://1.bp.blogspot.com/-AgSjAIAAGQU/XXgHAahd80I/AAAAAAACMYQ/ja2TJ7tMZE8uTmzyXJ0ySHd2Ml3DrzmWQCLcBGAs/s1600/il_794xN.1383776661_dosv.jpg",
                               name: "HeiHei",
                               description: "1 year old pet rooster",
                               approximate_age: 1,
