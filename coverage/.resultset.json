@@ -527,6 +527,27 @@
           null
         ]
       },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/reviews/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/features/shelters/delete_spec.rb": {
         "lines": [
           1,
@@ -910,6 +931,6 @@
         ]
       }
     },
-    "timestamp": 1598313027
+    "timestamp": 1598391924
   }
 }
