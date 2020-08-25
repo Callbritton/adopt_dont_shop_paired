@@ -7,7 +7,7 @@ RSpec.describe 'Shelter Reviews' do
                           city: "Denver",
                           state: "CO",
                           zip: 80014)
-    @review_1 = Review.create!(title: "This place is great!", rating: "5", content: "We found our puppy love", picture: "This is a picture")
+    @review_1 = @shelter_1.reviews.create!(title: "This place is great!", rating: "5", content: "We found our puppy love", optional_picture: "This is a picture")
   end
 
   describe 'As visitor' do
