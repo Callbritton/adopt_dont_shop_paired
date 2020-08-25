@@ -730,12 +730,6 @@
         "lines": [
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           1,
           2,
@@ -768,6 +762,33 @@
       "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/models/application_record.rb": {
         "lines": [
           1,
+          1,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/spec/models/review_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/ariqueaguilar/turing/mod_2/adopt_dont_shop_paired/app/models/review.rb": {
+        "lines": [
+          1,
+          1,
+          null,
           1,
           null
         ]
@@ -809,6 +830,8 @@
           1,
           1,
           1,
+          1,
+          null,
           null
         ]
       },
@@ -910,6 +933,6 @@
         ]
       }
     },
-    "timestamp": 1598313027
+    "timestamp": 1598393934
   }
 }

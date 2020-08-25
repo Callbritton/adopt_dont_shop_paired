@@ -875,3 +875,286 @@ Migrating to AddDescriptionToPets (20200822224939)
   ↳ db/seeds.rb:61
   [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:61
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (8667.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "adopt_dont_shop_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (47.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "adopt_dont_shop_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (51.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "adopt_dont_shop_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (165.6ms)[0m  [1m[35mCREATE DATABASE "adopt_dont_shop_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (71.4ms)[0m  [1m[35mCREATE DATABASE "adopt_dont_shop_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (3.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "pets" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "pets" ("id" bigserial primary key, "image" character varying, "name" character varying, "approximate_age" integer, "sex" character varying, "shelter_id" bigint, "adoption_status" character varying, "description" character varying)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_pets_on_shelter_id" ON "pets"  ("shelter_id")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "shelters" CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "shelters" ("id" bigserial primary key, "name" character varying, "address" character varying, "city" character varying, "state" character varying, "zip" integer)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  ↳ db/schema.rb:58
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "pets" ADD CONSTRAINT "fk_rails_92fb5d7a05"
+FOREIGN KEY ("shelter_id")
+  REFERENCES "shelters" ("id")
+[0m
+  ↳ db/schema.rb:59
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200822224939)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200821232339),
+(20200822224306),
+(20200820201527),
+(20200822223957),
+(20200820130855),
+(20200820132353),
+(20200819210703);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-25 21:30:52.933894"], ["updated_at", "2020-08-25 21:30:52.933894"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "pets" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "pets" ("id" bigserial primary key, "image" character varying, "name" character varying, "approximate_age" integer, "sex" character varying, "shelter_id" bigint, "adoption_status" character varying, "description" character varying)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_pets_on_shelter_id" ON "pets"  ("shelter_id")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shelters" CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "shelters" ("id" bigserial primary key, "name" character varying, "address" character varying, "city" character varying, "state" character varying, "zip" integer)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  ↳ db/schema.rb:58
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "pets" ADD CONSTRAINT "fk_rails_92fb5d7a05"
+FOREIGN KEY ("shelter_id")
+  REFERENCES "shelters" ("id")
+[0m
+  ↳ db/schema.rb:59
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200822224939)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200821232339),
+(20200822224306),
+(20200820201527),
+(20200822223957),
+(20200820130855),
+(20200820132353),
+(20200819210703);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-25 21:30:53.050257"], ["updated_at", "2020-08-25 21:30:53.050257"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-25 21:30:53.053441"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mShelter Create (1.6ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Willy's Animal Center"], ["address", "2020 Whirlwind Dr"], ["city", "Denver"], ["state", "CO"], ["zip", 80014]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mShelter Create (0.4ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wilmer's Place"], ["address", "123 Fake St"], ["city", "Chicago"], ["state", "IL"], ["zip", 60651]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mShelter Create (0.3ms)[0m  [1m[32mINSERT INTO "shelters" ("name", "address", "city", "state", "zip") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Luna's Animal Sanctuary"], ["address", "3456 Lost Place"], ["city", "Peoria"], ["state", "IL"], ["zip", 60564]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mPet Create (1.2ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://i.pinimg.com/236x/23/4d/b2/234db2abd5a83b872c345335fb9a4933--baby-rottweiler-cutest-puppy.jpg"], ["name", "Waylon"], ["approximate_age", 1], ["sex", "male"], ["shelter_id", 1], ["adoption_status", "available"], ["description", "1 year old rottie pup"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://usercontent1.hubstatic.com/2088428.jpg"], ["name", "Merle"], ["approximate_age", 5], ["sex", "male"], ["shelter_id", 1], ["adoption_status", "available"], ["description", "Mostly a wolf"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://1.bp.blogspot.com/-AgSjAIAAGQU/XXgHAahd80I/AAAAAAACMYQ/ja2TJ7tMZE8uTmzyXJ0ySHd2Ml3DrzmWQCLcBGAs/s1600/il_794xN.1383776661_dosv.jpg"], ["name", "HeiHei"], ["approximate_age", 1], ["sex", "male"], ["shelter_id", 2], ["adoption_status", "available"], ["description", "1 year old pet rooster"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://www.awesomestories.com/images/user/fc91b9a310fa92b98f27ab1038548062.jpg"], ["name", "Wilbur"], ["approximate_age", 1], ["sex", "male"], ["shelter_id", 2], ["adoption_status", "available"], ["description", "Tiny baby pig"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://i.pinimg.com/originals/52/4d/57/524d571a2e0d5bcb54f0b819ae9aeb63.jpg"], ["name", "Sandy"], ["approximate_age", 4], ["sex", "female"], ["shelter_id", 3], ["adoption_status", "available"], ["description", "Spits and bites"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("image", "name", "approximate_age", "sex", "shelter_id", "adoption_status", "description") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image", "https://cinefex.com/backissues/covers/Cinefex_108.jpg"], ["name", "Charlotte"], ["approximate_age", 6], ["sex", "female"], ["shelter_id", 3], ["adoption_status", "available"], ["description", "All the eyes and legs"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5022504912090105405)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateReviews (20200825220052)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "title" character varying, "rating" character varying, "content" character varying, "optional_picture" character varying)[0m
+  ↳ db/migrate/20200825220052_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200825220052"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5022504912090105405)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5022504912090105405)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddSheltersToReviews (20200825221453)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "reviews" ADD "shelter_id" bigint[0m
+  ↳ db/migrate/20200825221453_add_shelters_to_reviews.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_shelter_id" ON "reviews"  ("shelter_id")[0m
+  ↳ db/migrate/20200825221453_add_shelters_to_reviews.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "reviews" ADD CONSTRAINT "fk_rails_131565a078"
+FOREIGN KEY ("shelter_id")
+  REFERENCES "shelters" ("id")
+[0m
+  ↳ db/migrate/20200825221453_add_shelters_to_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200825221453"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5022504912090105405)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
