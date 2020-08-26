@@ -64,3 +64,8 @@ pet_6 = shelter_3.pets.create!(image: "https://cinefex.com/backissues/covers/Cin
                               approximate_age: 6,
                               sex: "female",
                               adoption_status: "available")
+
+review1 = shelter_1.reviews.create!(optional_picture: "https://arbordayblog.org/wp-content/uploads/2018/06/oak-tree-sunset-iStock-477164218.jpg",
+                              title: "Our First Review",
+                              rating: "4",
+                              content: "Best shelter I have ever been to")

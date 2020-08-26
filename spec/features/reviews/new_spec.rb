@@ -23,6 +23,7 @@ RSpec.describe 'As a visitor' do
                           state: "CO",
                           zip: 80014)
     end
+
     describe "When I visit a shelter's show page" do
     it "can create a new review" do
 
@@ -35,12 +36,11 @@ RSpec.describe 'As a visitor' do
       fill_in "Title", with: "The best shelter I have ever visited!"
       fill_in "Rating", with: "4"
       fill_in "Content", with: "Dr. Willy was so kind and welcoming."
-      fill_in "Image", with: ""
 
       click_on "Submit Review"
 
       expect(page).to have_current_path "/shelters/#{@shelter_1.id}"
-      expect(page).to have_content ("The best shelter I have ver visited!")
+      expect(page).to have_content ("The best shelter I have ever visited!")
       expect(page).to have_content ("4")
       expect(page).to have_content ("Dr. Willy was so kind and welcoming.")
     end
