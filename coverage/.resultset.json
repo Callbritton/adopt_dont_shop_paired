@@ -563,14 +563,14 @@
           null,
           1,
           null,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
           0,
           0,
@@ -985,8 +985,17 @@
           null,
           null
         ]
+      },
+      "/Users/cla/turing/2module/projects/adopt_dont_shop_paired/app/controllers/reviews_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1598441665
+    "timestamp": 1598442091
   }
 }

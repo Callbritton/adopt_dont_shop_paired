@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   patch '/pets/:pet_id', to: 'pets#update'
   delete '/pets/:pet_id', to: 'pets#destroy'
 
-  get '/shelters/:shelter_id/reviews/new', to: 'shelter_reviews#new'
+  get '/shelters/:shelter_id/reviews/new', to: 'reviews#new'
 end
