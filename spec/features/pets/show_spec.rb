@@ -10,7 +10,7 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
       zip: "80056"
     )
     pet_1 = shelter_1.pets.create(
-      image: "",
+      image: "https://cdn.akc.org/content/hero/puppy_pictures_header.jpg",
       name: "Waylon",
       description: "1 year old rottie pup",
       approximate_age: 1,
@@ -19,7 +19,7 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
     )
     visit "/pets"
     click_link "#{pet_1.name}"
-
+    save_and_open_page
     expect(current_path).to eq("/pets/#{pet_1.id}")
   end
 end

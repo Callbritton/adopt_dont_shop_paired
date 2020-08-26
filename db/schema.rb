@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_221453) do
   end
 
   create_table "pets", force: :cascade do |t|
-    t.string "image"
+    t.string "image", default: "https://ichef.bbci.co.uk/news/410/cpsprodpb/71E1/production/_99735192_gettyimages-459467912.jpg"
     t.string "name"
     t.integer "approximate_age"
     t.string "sex"
