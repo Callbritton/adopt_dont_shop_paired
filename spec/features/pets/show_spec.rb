@@ -19,7 +19,7 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
     )
     visit "/pets"
     click_link "#{pet_1.name}"
-    save_and_open_page
+    # save_and_open_page - note this!! **
     expect(current_path).to eq("/pets/#{pet_1.id}")
   end
 end
