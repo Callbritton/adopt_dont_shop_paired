@@ -5,9 +5,17 @@
 <p><%= @shelter.city %></p>
 <p> <%= @shelter.state %> <%= @shelter.zip%></p>
 
-
 <%= link_to "Available Pets", "/shelters/#{@shelter.id}/pets"%>
 <br>
 <%= link_to 'Update Shelter', "/shelters/#{@shelter.id}/edit" %>
 <br>
 <%= link_to 'Delete Shelter', "/shelters/#{@shelter.id}", method: :delete %>
+<br>
+<%= link_to 'Add Review', "/shelters/#{@shelter.id}/reviews/new"%>
+
+<% @shelter.reviews.each do |review| %>
+  <h2><a href="/reviews/<%= review.id %>"><%= review.title %></a></h2>
+  <p><%= image_tag review.optional_picture, width: 250 %></p>
+  <p>Rating: <%= review.rating %></p>
+  <p>Content: <%= review.content %></p>
+<% end %>
