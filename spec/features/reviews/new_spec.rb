@@ -1,18 +1,5 @@
 require 'rails_helper'
 
-# User Story 3, Shelter Review Creation
-#
-# As a visitor,
-# When I visit a shelter's show page
-# I see a link to add a new review for this shelter.
-# When I click on this link, I am taken to a new review path
-# On this new page, I see a form where I must enter:
-# - title
-# - rating
-# - content
-# I also see a field where I can enter an optional image (web address)
-# When the form is submitted, I should return to that shelter's show page
-# and I can see my new review
 
 RSpec.describe 'As a visitor' do
     before :each do
@@ -43,6 +30,23 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content ("The best shelter I have ever visited!")
       expect(page).to have_content ("4")
       expect(page).to have_content ("Dr. Willy was so kind and welcoming.")
+    end
+
+    it 'I cannot create a review without a title' do
+
+      visit "/shelters/#{@shelter_1.id}"
+
+      click_on 'Add Review'
+
+      expect(page).to have_current_path "/shelters/#{@shelter_1.id}/reviews/new"
+
+      click_on 'Submit Review'
+
+      expect(page).to have_conent("Form Entry Error: fill in a title, rating, and content in order to submit a shelter review")
+
+      expect(page).to have_current_path "/shelters/#{@shelter_1.id}/reviews/new"
+
+      expect(page).to have_button('Submit Review')
     end
   end
 end
