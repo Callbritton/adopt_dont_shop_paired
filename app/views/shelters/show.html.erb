@@ -14,8 +14,11 @@
 <%= link_to 'Add Review', "/shelters/#{@shelter.id}/reviews/new"%>
 
 <% @shelter.reviews.each do |review| %>
+<section class='reviews-<%=review.id%>'>
   <h2><a href="/reviews/<%= review.id %>"><%= review.title %></a></h2>
   <p><%= image_tag review.optional_picture, width: 250 %></p>
   <p>Rating: <%= review.rating %></p>
   <p>Content: <%= review.content %></p>
+  <%= link_to 'Edit Review', "/reviews/#{review.id}/edit" %>
+  </section>
 <% end %>
