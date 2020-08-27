@@ -77,19 +77,3 @@ RSpec.describe 'As a visitor' do
     end
   end
 end
-
-
-      # click_on 'Add Review'
-      #
-      # expect(page).to have_current_path "/shelters/#{@shelter_1.id}/reviews/new"
-      #
-      # fill_in "Title", with: "The best shelter I have ever visited!"
-      # fill_in "Rating", with: "4"
-      # fill_in "Content", with: "Dr. Willy was so kind and welcoming."
-      #
-      # click_on "Submit Review"
-      #
-      # expect(page).to have_current_path "/shelters/#{@shelter_1.id}"
-      # expect(page).to have_content ("The best shelter I have ever visited!")
-      # expect(page).to have_content ("4")
-      # expect(page).to have_content ("Dr. Willy was so kind and welcoming.")
