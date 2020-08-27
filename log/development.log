@@ -4146,3 +4146,113 @@ Completed 404 Not Found in 9ms (ActiveRecord: 4.8ms)
 ActiveRecord::RecordNotFound (Couldn't find Review without an ID):
   
 app/controllers/reviews_controller.rb:20:in `edit'
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:48:18 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cla/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 219ms (Views: 195.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/shelters/1/edit" for ::1 at 2020-08-27 08:48:36 -0400
+Processing by SheltersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.4ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:14
+  Rendering shelters/edit.html.erb within layouts/application
+  Rendered shelters/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 14.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:50:38 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (33.4ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Review:0x00007fd6740f7f10>):
+    1: <%= form_tag "/reviews/#{params[:review_id]}", method: :post do %>
+    2:     <%= label_tag :title %>
+    3:     <br>
+    4:     <%= text_field_tag :title, @review.name %>
+    5:     <br>
+    6:     <%= label_tag :rating %>
+    7:     <br>
+  
+app/views/reviews/edit.html.erb:4:in `block in _app_views_reviews_edit_html_erb___1328243792872477829_70279523431940'
+app/views/reviews/edit.html.erb:1:in `_app_views_reviews_edit_html_erb___1328243792872477829_70279523431940'
+Started GET "/shelters/1" for ::1 at 2020-08-27 08:51:22 -0400
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:10
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 1]]
+  ↳ app/views/shelters/show.html.erb:16
+  Rendered shelters/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:51:25 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Review:0x00007fd67771fde0>):
+    1: <%= form_tag "/reviews/#{@review.id}", method: :post do %>
+    2:     <%= label_tag :title %>
+    3:     <br>
+    4:     <%= text_field_tag :title, @review.name %>
+    5:     <br>
+    6:     <%= label_tag :rating %>
+    7:     <br>
+  
+app/views/reviews/edit.html.erb:4:in `block in _app_views_reviews_edit_html_erb___1328243792872477829_70279551841620'
+app/views/reviews/edit.html.erb:1:in `_app_views_reviews_edit_html_erb___1328243792872477829_70279551841620'
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:51:49 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:52:24 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cla/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 203ms (Views: 186.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:53:01 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+

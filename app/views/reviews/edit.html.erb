@@ -1,19 +1,19 @@
-<%= form_tag "/reviews/#{params[:review_id]}", method: :post do %>
+<%= form_tag "/reviews/#{@review.id}", method: :post do %>
     <%= label_tag :title %>
     <br>
-    <%= text_field_tag :title %>
+    <%= text_field_tag :title, @review.title %>
     <br>
     <%= label_tag :rating %>
     <br>
-    <%= text_field_tag :rating %>
+    <%= text_field_tag :rating, @review.rating %>
     <br>
     <%= label_tag :content %>
     <br>
-    <%= text_field_tag :content %>
+    <%= text_field_tag :content, @review.content %>
     <br>
     <%= label_tag :optional_picture %>
     <br>
-    <%= text_field_tag :optional_picture %>
+    <%= text_field_tag :optional_picture, @review.optional_picture %>
     <br>
     <%= submit_tag 'Edit Review' %>
   <% end %>
