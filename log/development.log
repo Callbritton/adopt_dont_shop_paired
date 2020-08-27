@@ -4080,3 +4080,69 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/shelters" for ::1 at 2020-08-27 08:26:58 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cla/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by SheltersController#index as HTML
+  Rendering shelters/index.html.erb within layouts/application
+  [1m[36mShelter Load (0.9ms)[0m  [1m[34mSELECT "shelters".* FROM "shelters"[0m
+  ↳ app/views/shelters/index.html.erb:5
+  Rendered shelters/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 227ms (Views: 211.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/shelters/1" for ::1 at 2020-08-27 08:26:59 -0400
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.3ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:10
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 1]]
+  ↳ app/views/shelters/show.html.erb:16
+  Rendered shelters/show.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 46ms (Views: 36.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:27:01 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review without an ID):
+  
+app/controllers/reviews_controller.rb:20:in `edit'
+Started GET "/shelters/1" for ::1 at 2020-08-27 08:27:28 -0400
+Processing by SheltersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShelter Load (0.2ms)[0m  [1m[34mSELECT  "shelters".* FROM "shelters" WHERE "shelters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shelters_controller.rb:10
+  Rendering shelters/show.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."shelter_id" = $1[0m  [["shelter_id", 1]]
+  ↳ app/views/shelters/show.html.erb:16
+  Rendered shelters/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 76ms (Views: 51.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:27:31 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+Unpermitted parameter: :review_id
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review without an ID):
+  
+app/controllers/reviews_controller.rb:20:in `edit'
+Started GET "/reviews/1/edit" for ::1 at 2020-08-27 08:27:43 -0400
+Processing by ReviewsController#edit as HTML
+  Parameters: {"review_id"=>"1"}
+Completed 404 Not Found in 9ms (ActiveRecord: 4.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review without an ID):
+  
+app/controllers/reviews_controller.rb:20:in `edit'

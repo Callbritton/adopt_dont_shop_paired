@@ -49,7 +49,7 @@ RSpec.describe 'As a visitor' do
           click_on 'Edit Review'
         end
 
-        expect(page).to have_current_path "/shelters/#{@shelter_1.id}/reviews/edit"
+        expect(page).to have_current_path "/reviews/#{@review_1.id}/edit"
       end
     end
   end
