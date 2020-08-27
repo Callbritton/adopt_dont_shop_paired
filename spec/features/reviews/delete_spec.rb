@@ -1,10 +1,3 @@
-# User Story 7, Delete a Shelter Review
-#
-# As a visitor,
-# When I visit a shelter's show page,
-# I see a link next to each shelter review to delete the review.
-# When I delete a shelter review I am returned to the shelter's show page
-# And I should no longer see that shelter review
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
@@ -35,7 +28,7 @@ RSpec.describe 'As a visitor' do
           visit "shelters/#{@shelter_1.id}"
 
           expect(page).to have_content("#{@review_1.title}")
-          
+
             within ".reviews-#{@review_1.id}" do
               expect(page).to have_link("Delete Review")
             end
