@@ -1,15 +1,3 @@
-# As a visitor,
-# When I visit a shelter's show page
-# I see a link to edit the shelter review next to each review.
-# When I click on this link, I am taken to an edit shelter review path
-# On this new page, I see a form that includes that review's pre populated data:
-# - title
-# - rating
-# - content
-# - image
-# I can update any of these fields and submit the form.
-# When the form is submitted, I should return to that shelter's show page
-# And I can see my updated review
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
@@ -60,7 +48,7 @@ RSpec.describe 'As a visitor' do
         expect(find_field('Title').value).to eq(@review_1.title)
         expect(find_field('Rating').value).to eq(@review_1.rating.to_s)
         expect(find_field('Content').value).to eq(@review_1.content)
-        # expect(find_field('Optional Picture').value).to eq(@review_1.optional_picture)
+        expect(find_field('Optional picture').value).to eq(@review_1.optional_picture)
       end
 
       it "I can update any of these fields and submit the form" do
@@ -69,7 +57,7 @@ RSpec.describe 'As a visitor' do
         fill_in 'Title', with: "If I could give 0 stars I would"
         fill_in 'Rating', with: 1
         fill_in 'Content', with: "This place is the worst business in town! My wife Karen and I hate it."
-        # fill_in 'Optional Picture', with: ""
+        fill_in 'Optional picture', with: ""
 
         click_button 'Edit Review'
         expect(current_path).to eq("/shelters/#{@review_1.shelter.id}")
