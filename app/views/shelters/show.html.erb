@@ -19,6 +19,6 @@
   <p><%= image_tag review.optional_picture, width: 250 %></p>
   <p>Rating: <%= review.rating %></p>
   <p>Content: <%= review.content %></p>
-  <%= link_to 'Edit Review', "/shelters/#{@shelter.id}/reviews/edit"%>
+  <%= link_to 'Edit Review', "/reviews/#{review.id}/edit" %>
   </section>
 <% end %>
