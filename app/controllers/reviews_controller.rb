@@ -8,8 +8,12 @@ class ReviewsController < ApplicationController
   def create
     shelter = Shelter.find(params[:shelter_id])
     review = shelter.reviews.new(review_params)
-    review.save
-    redirect_to "/shelters/#{params[:shelter_id]}"
+      if review.save
+        redirect_to "/shelters/#{params[:shelter_id]}"
+      else
+        flash[:notice] = "Form Entry Error: fill in a title, rating, and content in order to submit a shelter review"
+        render :new
+      end
   end
 
 

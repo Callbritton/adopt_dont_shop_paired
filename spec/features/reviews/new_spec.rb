@@ -42,9 +42,7 @@ RSpec.describe 'As a visitor' do
 
       click_on 'Submit Review'
 
-      expect(page).to have_conent("Form Entry Error: fill in a title, rating, and content in order to submit a shelter review")
-
-      expect(page).to have_current_path "/shelters/#{@shelter_1.id}/reviews/new"
+      expect(page).to have_content("Form Entry Error: fill in a title, rating, and content in order to submit a shelter review")
 
       expect(page).to have_button('Submit Review')
     end
