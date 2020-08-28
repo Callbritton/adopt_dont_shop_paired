@@ -1,11 +1,11 @@
 class Favorite
- attr_reader :contents
+ attr_reader :favorites
   def initialize(initial_contents)
-    @contents = initial_contents
+    @favorites = initial_contents
   end
 
   def total_count
-    @contents.count
+    @favorites.count
   end
 
 end

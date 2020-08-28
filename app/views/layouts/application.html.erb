@@ -10,12 +10,12 @@
   </head>
 
   <body>
-    <nav>
-      Favorites: <% @favorites.total_count %>
-    </nav>
     <% flash.each do |type, message| %>
     <p><%= message %></p>
     <% end %>
+    <nav>
+      <p>Favorites: <%= @favorites.count %></p>
+    </nav>
     <%= yield %>
   </body>
 </html>

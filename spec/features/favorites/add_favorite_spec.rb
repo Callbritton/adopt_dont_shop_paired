@@ -10,7 +10,7 @@ require 'rails_helper'
 # The favorite indicator in the nav bar has incremented by one
 
 
-RSpec.describe "As a visitor when I visit a pet's show page" do
+RSpec.feature "As a visitor when I visit a pet's show page" do
   before :each do
     @shelter_1 = Shelter.create!(
       name: "Waylon's Animal Shelter",

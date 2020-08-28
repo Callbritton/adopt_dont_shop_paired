@@ -2,11 +2,11 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
-    @favorites = Favorite.new(session[:favorites])
   end
 
   def show
     @pet = Pet.find(params[:pet_id])
+    @favorites = Favorite.new(session[:favorites])
   end
 
   def new
