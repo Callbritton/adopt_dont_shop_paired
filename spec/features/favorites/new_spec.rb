@@ -1,3 +1,4 @@
+require 'rails_helper'
 # User Story 9, Favorite Creation
 #
 # As a visitor
@@ -10,8 +11,8 @@
 
 
 RSpec.describe "As a visitor when I visit a pet's show page" do
-  it "I see a flash message indicating that the pet has been added to my favorites list" do
-    shelter_1 = Shelter.create(
+  before :each do
+    @shelter_1 = Shelter.create!(
       name: "Waylon's Animal Shelter",
       address: "2020 Whirlwind DR",
       city: "Denver",
@@ -19,18 +20,30 @@ RSpec.describe "As a visitor when I visit a pet's show page" do
       zip: "80014"
     )
 
-    pet_1 = shelter_1.pets.create(
+    @pet_1 = @shelter_1.pets.create(
       image: "https://cdn.akc.org/content/hero/puppy_pictures_header.jpg",
       name: "Duke",
       description: "A good boy",
       approximate_age: 9,
       sex: "male"
     )
+  end
+  xit "I see a flash message indicating that the pet has been added to my favorites list" do
 
-    visit "/pets/#{pet_1.id}"
+    visit "/pets/#{@pet_1.id}"
 
     click_button "Add to Favorites"
     expect(page).to have_content('Favorites: 0')
-    expect(page).to have_content("You have added #{pet_1.name} to your favorites")
+    expect(page).to have_content("You have added #{@pet_1.name} to your favorites")
+  end
+
+  it "The favorite indicator in the nav bar has incremented by one" do
+
+    visit "/pets/#{@pet_1.id}"
+
+    expect(page).to have_content('Favorites: 0')
+    click_button "Add to Favorites"
+    expect(page).to have_content("You have added #{@pet_1.name} to your favorites")
+    expect(page).to have_content('Favorites: 1')
   end
 end

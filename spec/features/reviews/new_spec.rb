@@ -12,6 +12,7 @@ RSpec.describe 'As a visitor' do
     end
 
     describe "When I visit a shelter's show page" do
+
     it "can create a new review" do
 
       visit "/shelters/#{@shelter_1.id}"
