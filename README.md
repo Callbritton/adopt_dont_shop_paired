@@ -191,7 +191,7 @@ I can see this favorite indicator from any page in the application
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 9, Favorite Creation
 

@@ -28,12 +28,12 @@ RSpec.feature "As a visitor when I visit a pet's show page" do
       sex: "male"
     )
   end
-  xit "I see a flash message indicating that the pet has been added to my favorites list" do
+  it "I see a flash message indicating that the pet has been added to my favorites list" do
 
     visit "/pets/#{@pet_1.id}"
 
     click_button "Add to Favorites"
-    expect(page).to have_content('Favorites: 0')
+    expect(page).to have_content('Favorites: 1')
     expect(page).to have_content("You have added #{@pet_1.name} to your favorites")
   end
 
