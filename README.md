@@ -180,7 +180,7 @@ And I should no longer see that shelter review
 Users will be able to favorite a pet and keep track of pet's they're interested in
 
 ```
-[ ] done
+[x] done
 
 User Story 8, Favorite Indicator
 
@@ -191,7 +191,7 @@ I can see this favorite indicator from any page in the application
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 9, Favorite Creation
 
@@ -206,7 +206,7 @@ The favorite indicator in the nav bar has incremented by one
 
 
 ```
-[ ] done
+[x] done
 
 User Story 10, Favorite Index Page
 
