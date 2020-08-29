@@ -64,5 +64,6 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
 
     visit "/favorites"
     expect(current_path).to eq("/favorites")
+    expect(page).to have_content("#{@pet_1.name}")
   end
 end
