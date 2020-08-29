@@ -10,7 +10,11 @@ class Favorite
   end
 
   def total_count
-    @contents.count
+    if @contents.class == Array
+      @contents.count
+    else
+      @contents.count
+    end
   end
 
 end
