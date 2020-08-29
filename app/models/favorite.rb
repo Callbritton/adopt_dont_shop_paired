@@ -6,7 +6,7 @@ class Favorite
   end
 
   def add_pet(pet)
-    @contents << pet.id
+    @contents << pet
   end
 
   def total_count
