@@ -11,8 +11,7 @@
 
   <body>
     <nav>
-    <p>Favorites: <%= favorites.contents.count %></p>
-    <!%= require "pry"; binding.pry %>
+    <p>Favorites: <%= favorites.total_count %></p>
     </nav>
 
     <% flash.each do |type, message| %>

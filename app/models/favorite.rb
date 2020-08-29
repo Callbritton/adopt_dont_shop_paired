@@ -11,12 +11,6 @@ class Favorite
 
   def total_count
     @contents.count
-    # require "pry"; binding.pry
-    # if @contents.class == Array
-    #   @contents.count
-    # else
-    #   @contents.count
-    # end
   end
 
 end
