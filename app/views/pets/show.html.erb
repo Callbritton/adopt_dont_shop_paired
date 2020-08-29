@@ -5,11 +5,12 @@
 <p>Sex: <%= @pet.sex %></p>
 <p>Adoption Status: <%= @pet.adoption_status %></p>
 
+<%= button_to "Add to Favorites", "/favorites/#{@pet.id}", method: :patch %>
+<br>
 <%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
 <br>
 <%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
 <br>
-<%= button_to "Add to Favorites", "/favorites/#{@pet.id}", method: :patch %>
 <br>
 <a href="/pets">Return to Pet Index</a>
 <br>
