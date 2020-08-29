@@ -8,8 +8,8 @@ require "rails_helper"
 # I can see this favorite indicator from any page in the application
 
 RSpec.describe "Favorites" do
-  it "I see a favorite indicator in my navigation bar" do
-    shelter_1 = Shelter.create(
+  before :each do
+    @shelter_1 = Shelter.create(
       name: "Waylon's Animal Shelter",
       address: "2020 Whirlwind DR",
       city: "Denver",
@@ -17,15 +17,18 @@ RSpec.describe "Favorites" do
       zip: "80014"
     )
 
-    pet_1 = shelter_1.pets.create(
+    @pet_1 = @shelter_1.pets.create(
       image: "https://cdn.akc.org/content/hero/puppy_pictures_header.jpg",
       name: "Duke",
       description: "A good boy",
       approximate_age: 9,
       sex: "male"
     )
+  end
 
-    visit "/pets/#{pet_1.id}"
+    it "I see a favorite indicator in my navigation bar" do
+
+    visit "/pets/#{@pet_1.id}"
     expect(page).to have_content('Favorites: 0')
 
     visit "/pets"
@@ -34,7 +37,7 @@ RSpec.describe "Favorites" do
     visit "/shelters"
     expect(page).to have_content('Favorites: 0')
 
-    visit "/shelters/#{shelter_1.id}"
+    visit "/shelters/#{@shelter_1.id}"
     expect(page).to have_content('Favorites: 0')
   end
-end
+end 
