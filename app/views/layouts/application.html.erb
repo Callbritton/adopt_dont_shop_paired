@@ -10,9 +10,9 @@
   </head>
 
   <body>
-    <nav>
-    <p>Favorites: <%= favorites.total_count %></p>
-    </nav>
+    <section class="nav">
+    <p> <%= link_to "Favorites: ", "/favorites" %>  <%= favorites.total_count %> </p>
+    </section>
 
     <% flash.each do |type, message| %>
     <p><%= message %></p>

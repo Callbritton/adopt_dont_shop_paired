@@ -42,16 +42,6 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
     )
     end
 
-    # User Story 10, Favorite Index Page
-    #
-    # As a visitor
-    # When I have added pets to my favorites list
-    # And I visit my favorites index page ("/favorites")
-    # I see all pets I've favorited
-    # Each pet in my favorites shows the following information:
-    # - pet's name (link to pets show page)
-    # - pet's image
-
     it "I visit my favorites index page ('/favorites') I see all pets I've favorited" do
     visit "/pets/#{@pet_1.id}"
     click_button "Add to Favorites"
@@ -65,13 +55,17 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
     visit "/favorites"
     expect(current_path).to eq("/favorites")
     expect(page).to have_content("#{@pet_1.name}")
-    # expect(page).to have_content("#{@pet_1.image}")
 
     expect(page).to have_content("#{@pet_2.name}")
-    # expect(page).to have_content("#{@pet_2.image}")
 
     expect(page).to have_content("#{@pet_3.name}")
-    # expect(page).to have_content("#{@pet_3.image}")
+  end
 
+  it "When I click on the favorite indicator in the nav bar I am taken to the favorites index page" do
+    visit "/pets"
+      within '.nav' do
+        click_link "Favorites"
+      end
+      expect(current_path).to eq('/favorites')
   end
 end
