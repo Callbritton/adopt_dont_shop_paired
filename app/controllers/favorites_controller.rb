@@ -10,7 +10,7 @@ class FavoritesController < ApplicationController
   end
 
   def index
-    @favorites = favorites.contents
+    favorites
   end
 
 end

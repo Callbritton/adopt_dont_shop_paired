@@ -1,7 +1,7 @@
 <h1>All Favorite Pets</h1>
 <a href="/">Return to Home</a>
 <br>
-<% @favorites.each do |pet| %>
+<% @favorites.contents.each do |pet| %>
   <h2><%= pet["name"] %></h2>
   <!%= require "pry"; binding.pry %>
   <p><%= image_tag pet["image"], width: 250 %></p>

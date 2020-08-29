@@ -10,11 +10,13 @@ class Favorite
   end
 
   def total_count
-    if @contents.class == Array
-      @contents.count
-    else
-      @contents.count
-    end
+    @contents.count
+    # require "pry"; binding.pry
+    # if @contents.class == Array
+    #   @contents.count
+    # else
+    #   @contents.count
+    # end
   end
 
 end
