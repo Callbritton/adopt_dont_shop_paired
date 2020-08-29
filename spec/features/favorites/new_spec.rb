@@ -29,8 +29,9 @@ RSpec.describe "As a visitor when I visit a pet's show page" do
 
     visit "/pets/#{pet_1.id}"
 
-    click_button "Add to Favorites"
     expect(page).to have_content('Favorites: 0')
+    click_button "Add to Favorites"
+    
     expect(page).to have_content("You have added #{pet_1.name} to your favorites")
     expect(page).to have_content('Favorites: 1')
   end
