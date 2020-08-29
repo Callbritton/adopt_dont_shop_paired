@@ -11,9 +11,9 @@
 
   <body>
     <nav>
-      Favorites: 0 
-      <!%= sessions[:favorites].count %>
+      <%= @favorites.total_count %>
     </nav>
+
     <% flash.each do |type, message| %>
     <p><%= message %></p>
     <% end %>
