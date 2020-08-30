@@ -100,4 +100,20 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       expect(page).to have_content("Favorites: 2")
   end
+
+
+
+  # User Story 14, No Favorites Page
+  #
+  # As a visitor
+  # When I have not added any pets to my favorites list
+  # And I visit my favorites page ("/favorites")
+  # I see text saying that I have no favorited pets
+
+  it 'When I have not added any pets to my favorites list, I see text saying that I have no favorited pets' do
+
+    visit "/favorites"
+    expect(page).to have_content("You have no favorite pets")
+
+  end
 end
