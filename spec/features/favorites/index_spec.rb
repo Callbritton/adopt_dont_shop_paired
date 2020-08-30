@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "When I visit '/pets/:id'", type: :feature do
+RSpec.describe "When I visit '/favorites'", type: :feature do
   before :each do
     @shelter_1 = Shelter.create(
       name: "Buck's Pet Adoption Center",
@@ -67,5 +67,20 @@ RSpec.describe "When I visit '/pets/:id'", type: :feature do
         click_link "Favorites"
       end
       expect(current_path).to eq('/favorites')
+  end
+
+  it "When I visit my favorites page ('/favorites') I see a button for each pet to remove that pet" do
+  end
+    it "When I click that button a delete request is sent to '/favorites/:pet_id' and I am redirected to favorites page" do
+      visit "/pets/#{@pet_1.id}"
+      click_button "Add to Favorites"
+
+      visit "/favorites"
+      expect(page).to have_content("Favorites: 1")
+
+      within ".favorite_pets-#{@pet_1.id}"
+      expect(page).to have_button("Remove from Favorites")
+      click_button "Remove from Favorites"
+
   end
 end
