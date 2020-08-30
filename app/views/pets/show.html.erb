@@ -6,9 +6,9 @@
 <p>Adoption Status: <%= @pet.adoption_status %></p>
 
 <% if favorites.contents.include?(@pet.id) %>
-  <p> This pet is already favorited </p>
+  <%= button_to "Remove from Favorites", "/favorites/#{@pet.id}", method: :delete %>
   <% else %>
-<%= button_to "Add to Favorites", "/favorites/#{@pet.id}", method: :patch %>
+  <%= button_to "Add to Favorites", "/favorites/#{@pet.id}", method: :patch %>
 <%end%>
 <br>
 <%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
