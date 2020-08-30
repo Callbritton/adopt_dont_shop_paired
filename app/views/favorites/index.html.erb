@@ -1,8 +1,8 @@
 <h1>All Favorite Pets</h1>
 <a href="/">Return to Home</a>
 <br>
-<section class="favorite_pets">
 <% favorites.pets_by_id.each do |pet| %>
+<section class="favorite_pets-<%=pet.id%>">
   <h2><%= pet.name %></h2>
   <p><%= image_tag pet.image, width: 250 %></p>
 <% end %>

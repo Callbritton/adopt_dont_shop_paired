@@ -71,16 +71,34 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
   it "When I visit my favorites page ('/favorites') I see a button for each pet to remove that pet" do
   end
+
     it "When I click that button a delete request is sent to '/favorites/:pet_id' and I am redirected to favorites page" do
       visit "/pets/#{@pet_1.id}"
       click_button "Add to Favorites"
 
+      visit "/pets/#{@pet_2.id}"
+      click_button "Add to Favorites"
+
+      visit "/pets/#{@pet_3.id}"
+      click_button "Add to Favorites"
+
       visit "/favorites"
+      expect(page).to have_content("Favorites: 3")
+
+      within ".favorite_pets-#{@pet_1.id}" do
+        expect(page).to have_button("Remove from Favorites")
+        click_button "Remove from Favorites"
+      end
+
+      within ".favorite_pets-#{@pet_2.id}" do
+        expect(page).to have_button("Remove from Favorites")
+        click_button "Remove from Favorites"
+      end
+
+      within ".favorite_pets-#{@pet_3.id}" do
+        expect(page).to have_button("Remove from Favorites")
+      end
+
       expect(page).to have_content("Favorites: 1")
-
-      within ".favorite_pets-#{@pet_1.id}"
-      expect(page).to have_button("Remove from Favorites")
-      click_button "Remove from Favorites"
-
   end
 end
