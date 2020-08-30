@@ -5,7 +5,7 @@
 <p>Sex: <%= @pet.sex %></p>
 <p>Adoption Status: <%= @pet.adoption_status %></p>
 
-<% if already_favorited(@pet) %>
+<% if favorites.contents.include?(@pet.id) %>
   <p> This pet is already favorited </p>
   <% else %>
 <%= button_to "Add to Favorites", "/favorites/#{@pet.id}", method: :patch %>
