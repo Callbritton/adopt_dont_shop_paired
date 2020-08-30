@@ -19,4 +19,8 @@ class Favorite
     end
   end
 
+  def destroy_pet(pet)
+    @contents.delete(pet)
+  end
+
 end
