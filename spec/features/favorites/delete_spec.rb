@@ -35,7 +35,7 @@ RSpec.describe "As a vistor When I have added a pet to my favorite list" do
     expect(page).to_not have_button("Add to Favorites")
     expect(page).to have_button("Remove from Favorites")
     click_button "Remove from Favorites"
-    expect(page).to have_content("#{pet_1.name} has been removed from your favorites")
+    expect(page).to have_content("You have removed #{pet_1.name} from your favorites")
     expect(page).to have_content("Favorites: 0")
     expect(page).to have_button("Add to Favorites")
 
