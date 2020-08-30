@@ -6,11 +6,21 @@ class Favorite
   end
 
   def add_pet(pet)
-    @contents << pet
+    @contents << pet.id
   end
 
   def total_count
     @contents.count
+  end
+
+  def pets_by_id
+    @contents.collect do |id|
+      Pet.find(id)
+    end
+  end
+
+  def destroy_pet(pet)
+    @contents.delete(pet)
   end
 
 end
