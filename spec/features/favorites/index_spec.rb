@@ -87,18 +87,17 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       within ".favorite_pets-#{@pet_1.id}" do
         expect(page).to have_button("Remove from Favorites")
-        click_button "Remove from Favorites"
       end
 
       within ".favorite_pets-#{@pet_2.id}" do
         expect(page).to have_button("Remove from Favorites")
-        click_button "Remove from Favorites"
       end
 
       within ".favorite_pets-#{@pet_3.id}" do
         expect(page).to have_button("Remove from Favorites")
+        click_button "Remove from Favorites"
       end
 
-      expect(page).to have_content("Favorites: 1")
+      expect(page).to have_content("Favorites: 2")
   end
 end
