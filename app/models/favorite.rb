@@ -30,10 +30,7 @@ class Favorite
   end
 
   def destroy_all_pets
-    result = @contents.map do |pet|
-      destroy_pet(pet)
-    end
-    result
+    @contents.clear
   end
 
 end
