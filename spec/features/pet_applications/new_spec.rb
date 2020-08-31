@@ -66,17 +66,8 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       click_link "Adopt my favorite pets"
 
-      expect(page).to have_current_path "/favorites/applications/new"
+      expect(page).to have_current_path "/favorites/pet_applications/new"
 
-      fill_in 'Name', with: 'Denver Animal Shelter'
-      fill_in 'Address', with: '1241 W Bayaud Ave'
-      fill_in 'City', with: 'Denver'
-      fill_in 'State', with: 'CO'
-      fill_in 'Zip', with: '80223'
-      click_on 'Create Shelter'
-
-      expect(page).to have_current_path "/shelters"
-      expect(page).to have_content ('Denver Animal Shelter')
     end
 
 
@@ -92,4 +83,15 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
     # And I click on a button to submit my application
     # I see a flash message indicating my application went through for the pets that were selected
     # And I'm taken back to my favorites page where I no longer see the pets for which I just applied listed as favorites
+
+#FOR TESTS
+    # fill_in 'Name', with: 'Denver Animal Shelter'
+    # fill_in 'Address', with: '1241 W Bayaud Ave'
+    # fill_in 'City', with: 'Denver'
+    # fill_in 'State', with: 'CO'
+    # fill_in 'Zip', with: '80223'
+    # click_on 'Create Shelter'
+    #
+    # expect(page).to have_current_path "/shelters"
+    # expect(page).to have_content ('Denver Animal Shelter')
   end
