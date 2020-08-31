@@ -25,10 +25,12 @@ class Favorite
 
   def when_contents_are_empty(message)
     if total_count == 0
-      @message = message
-    else
-      @message = ""
+      printed_message = message
     end
+  end
+
+  def destroy_all_pets
+    @contents.clear
   end
 
 end

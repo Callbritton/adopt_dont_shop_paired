@@ -20,4 +20,9 @@ class FavoritesController < ApplicationController
     redirect_to "/pets/#{pet.id}"
   end
 
+  def destroy_all
+    favorites.destroy_all_pets
+    redirect_to "/favorites"
+  end
+
 end
