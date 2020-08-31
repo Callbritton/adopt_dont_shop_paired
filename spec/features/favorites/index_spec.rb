@@ -42,7 +42,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
     )
     end
 
-    xit "I visit my favorites index page ('/favorites') I see all pets I've favorited" do
+    it "I visit my favorites index page ('/favorites') I see all pets I've favorited" do
       visit "/pets/#{@pet_1.id}"
       click_button "Add to Favorites"
 
@@ -61,7 +61,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       expect(page).to have_content("#{@pet_3.name}")
     end
 
-    xit "When I click on the favorite indicator in the nav bar I am taken to the favorites index page" do
+    it "When I click on the favorite indicator in the nav bar I am taken to the favorites index page" do
       visit "/pets"
         within '.nav' do
           click_link "Favorites"
@@ -69,7 +69,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
         expect(current_path).to eq('/favorites')
     end
 
-    xit "When I click that button a delete request is sent to '/favorites/:pet_id' and I am redirected to favorites page" do
+    it "When I click that button a delete request is sent to '/favorites/:pet_id' and I am redirected to favorites page" do
       visit "/pets/#{@pet_1.id}"
       click_button "Add to Favorites"
 
@@ -98,24 +98,12 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       expect(page).to have_content("Favorites: 2")
     end
 
-    xit 'When I have not added any pets to my favorites list, I see text saying that I have no favorited pets' do
+    it 'When I have not added any pets to my favorites list, I see text saying that I have no favorited pets' do
 
       visit "/favorites"
       expect(page).to have_content("Favorites: 0")
       expect(page).to have_content("You have no favorited pets")
     end
-
-
-  # User Story 15, Remove all Favorite from Favorites Page
-  #
-  # # As a visitor
-  # # When I have added pets to my favorites list
-  # # And I visit my favorites page ("/favorites")
-  # # I see a link to remove all favorited pets
-  # # When I click that link
-  # # I'm redirected back to the favorites page
-  # # I see the text saying that I have no favorited pets
-  # # And the favorites indicator returns to 0
 
     it "When I have added pets to my favorites list, I see a link to remove all favorited pets, I'm redirected back to the favorites page, I see the text saying that I have no favorited pets" do
       visit "/pets/#{@pet_1.id}"
@@ -127,12 +115,11 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       visit "/favorites"
       expect(page).to have_content("Favorites: 2")
 
-      expect(page).to have_button("Remove ALL from Favorites")
+      expect(page).to have_link("Remove ALL from Favorites")
 
-      click_button "Remove ALL from Favorites"
+      click_link "Remove ALL from Favorites"
 
       expect(page).to have_content("Favorites: 0")
-      save_and_open_page
     end
 
 end
