@@ -262,7 +262,7 @@ And I also see that the favorites indicator has decremented by 1
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 14, No Favorites Page
 

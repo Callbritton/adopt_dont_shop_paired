@@ -23,4 +23,12 @@ class Favorite
     @contents.delete(pet)
   end
 
+  def when_contents_are_empty(message)
+    if total_count == 0
+      @message = message
+    else
+      @message = ""
+    end
+  end
+
 end
