@@ -21,7 +21,6 @@ class FavoritesController < ApplicationController
   end
 
   def destroy_all
-    # require "pry"; binding.pry
     favorites.destroy_all_pets
     redirect_to "/favorites"
   end
