@@ -124,17 +124,15 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       visit "/pets/#{@pet_2.id}"
       click_button "Add to Favorites"
 
-      visit "/pets/#{@pet_3.id}"
-      click_button "Add to Favorites"
-
       visit "/favorites"
-      expect(page).to have_content("Favorites: 3")
+      expect(page).to have_content("Favorites: 2")
 
       expect(page).to have_button("Remove ALL from Favorites")
+
       click_button "Remove ALL from Favorites"
 
       expect(page).to have_content("Favorites: 0")
-
+      save_and_open_page
     end
 
 end

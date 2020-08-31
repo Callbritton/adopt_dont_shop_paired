@@ -26,9 +26,14 @@ class Favorite
   def when_contents_are_empty(message)
     if total_count == 0
       printed_message = message
-    else
-      printed_message = ""
     end
+  end
+
+  def destroy_all_pets
+    result = @contents.map do |pet|
+      destroy_pet(pet)
+    end
+    result
   end
 
 end
