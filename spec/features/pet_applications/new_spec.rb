@@ -70,6 +70,40 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
     end
 
+    it "At the top of the form, I can select from the pets of which I've favorited for which I'd like this application to apply towards (can be more than one)" do
+      visit "/pets/#{@pet_1.id}"
+      click_button "Add to Favorites"
+
+      visit "/pets/#{@pet_2.id}"
+      click_button "Add to Favorites"
+
+      visit "/pets/#{@pet_3.id}"
+      click_button "Add to Favorites"
+
+      visit "/favorites"
+      expect(page).to have_link("Adopt my favorite pets")
+
+      click_link "Adopt my favorite pets"
+
+      expect(page).to have_current_path "/favorites/pet_applications/new"
+
+      #FOR TESTS
+      #checkout box for each pet
+      fill_in 'Name', with: 'Christopher'
+      fill_in 'Address', with: '1241 W Bayaud Ave'
+      fill_in 'City', with: 'Denver'
+      fill_in 'State', with: 'CO'
+      fill_in 'Zip', with: '80223'
+      fill_in 'Phone Number', with: '312-333-3333'
+      fill_in 'Why would you make a good home for this/these pet(s)', with: 'I think I would be a good home because wob whon whonw wonw wown.'
+
+      click_on 'Submit'
+      #
+      # expect(page).to have_current_path "/shelters"
+      # expect(page).to have_content ('Denver Animal Shelter')
+
+    end
+
 
     # At the top of the form, I can select from the pets of which I've favorited for which I'd like this application to apply towards (can be more than one)
     # When I select one or more pets, and fill in my
@@ -84,14 +118,4 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
     # I see a flash message indicating my application went through for the pets that were selected
     # And I'm taken back to my favorites page where I no longer see the pets for which I just applied listed as favorites
 
-#FOR TESTS
-    # fill_in 'Name', with: 'Denver Animal Shelter'
-    # fill_in 'Address', with: '1241 W Bayaud Ave'
-    # fill_in 'City', with: 'Denver'
-    # fill_in 'State', with: 'CO'
-    # fill_in 'Zip', with: '80223'
-    # click_on 'Create Shelter'
-    #
-    # expect(page).to have_current_path "/shelters"
-    # expect(page).to have_content ('Denver Animal Shelter')
   end

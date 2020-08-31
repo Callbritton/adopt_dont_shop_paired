@@ -1,1 +1,8 @@
 <!% Pet Applications New HTML Doc %>
+
+<% favorites.pets_by_id.each do |pet| %>
+        <li>
+        <%= check_box_tag 'favorites[]', pet.id %>
+        <%= pet.name %>
+      </li>
+<% end %>
