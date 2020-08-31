@@ -1,17 +1,18 @@
 <a href="/">Return to Home</a>
 <h1>All Favorite Pets:</h1>
 
-<% if favorites.contents.empty? %>
-<% message = "You have no favorited pets" %>
-<% result = favorites.when_contents_are_empty(message) %>
-<h3><%= "#{result}" %></h3>
+<% if favorites.contents_are_empty? %>
+    <h3>You have no favorited pets</h3>
 <% else %>
-<%= link_to "Remove ALL from Favorites", "/favorites", method: :delete  %>
-<% favorites.pets_by_id.each do |pet| %>
-<section class="favorite_pets-<%=pet.id%>">
-  <h2><%= pet.name %></h2>
-  <p><%= image_tag pet.image, width: 250 %></p>
-  <%= button_to "Remove from Favorites", "/favorites/#{pet.id}", method: :delete %>
-<% end %>
-</section>
+    <%= link_to "Remove ALL from Favorites", "/favorites", method: :delete  %>
+    <% favorites.pets_by_id.each do |pet| %>
+
+    <section class="favorite_pets-<%=pet.id%>">
+
+      <h2><%= pet.name %></h2>
+      <p><%= image_tag pet.image, width: 250 %></p>
+      <%= button_to "Remove from Favorites", "/favorites/#{pet.id}", method: :delete %>
+      <% end %>
+
+    </section>
 <% end %>
