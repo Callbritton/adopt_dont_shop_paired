@@ -21,12 +21,12 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    review = Review.find(params[:review_id])
-    if review.update(review_params)
-      redirect_to "/shelters/#{review.shelter.id}"
+    @review = Review.find(params[:review_id])
+    if @review.update(review_params)
+      redirect_to "/shelters/#{@review.shelter.id}"
     else
       flash[:notice] = "Please ensure all required fields are completed"
-      redirect_to "/reviews/#{review.id}/edit"
+      render :edit
     end
   end
 
