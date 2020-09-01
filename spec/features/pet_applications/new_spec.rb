@@ -94,8 +94,8 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       fill_in 'City', with: 'Denver'
       fill_in 'State', with: 'CO'
       fill_in 'Zip', with: '80223'
-      fill_in 'Phone Number', with: '312-333-3333'
-      fill_in 'Why would you make a good home for this/these pet(s)', with: 'I think I would be a good home because wob whon whonw wonw wown.'
+      fill_in 'Phone number', with: '312-333-3333'
+      fill_in :good_home_answer, with: 'I think I would be a good home because wob whon whonw wonw wown.'
 
       click_on 'Submit'
       #
