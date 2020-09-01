@@ -4,8 +4,14 @@ class PetApplicationsController < ApplicationController
   end
 
   def create
-    # pets = Pet.find(params[:favorites])
-    PetApplication.new(pet_applications_params)
+    pets = (params[:favorites])
+    pets.each do |pet|
+      integer_pet = pet.to_i
+      favorites.destroy_pet(integer_pet)
+    end
+    redirect_to "/favorites"
+    flash[:notice] = "Thank you for your application!"
+    # PetApplication.new(pet_applications_params)
   end
 
 
