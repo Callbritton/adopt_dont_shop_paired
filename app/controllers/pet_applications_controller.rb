@@ -13,7 +13,7 @@ class PetApplicationsController < ApplicationController
 private
 
   def pet_applications_params
-    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description, :favorites)
+    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description)
   end
 
 end
