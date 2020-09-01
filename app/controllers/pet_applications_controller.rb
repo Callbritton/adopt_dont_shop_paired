@@ -4,17 +4,20 @@ class PetApplicationsController < ApplicationController
   end
 
   def create
-    pets = (params[:favorites])
-    pets.each do |pet|
-      integer_pet = pet.to_i
-      favorites.destroy_pet(integer_pet)
+    pet_app = PetApplication.new(pet_applications_params)
+    if pet_app.save
+      pets = (params[:favorites])
+      pets.each do |pet|
+        integer_pet = pet.to_i
+        favorites.destroy_pet(integer_pet)
+      end
+      redirect_to "/favorites"
+      flash[:notice] = "Thank you for your application!"
+    else
+      flash[:notice] = "Form Entry Error: fill in all fields in order to submit application"
+      render :new
     end
-    redirect_to "/favorites"
-    flash[:notice] = "Thank you for your application!"
-    # PetApplication.new(pet_applications_params)
   end
-
-
 
 private
 
