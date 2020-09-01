@@ -1,13 +1,7 @@
 require 'rails_helper'
 
-# describe Shelter, type: :model do
-
-  # describe "validations" do
-  #   it { should validate_presence_of :address }
-  # end
 
   RSpec.describe Shelter, type: :model do
-  describe Shelter, type: :model do
     describe "validations" do
       it { should validate_presence_of :name }
       it { should validate_presence_of :address }
@@ -16,13 +10,8 @@ require 'rails_helper'
       it { should validate_presence_of :zip }
     end
 
+    describe 'relationships' do
+      it { should have_many :pets }
+    end
 
-  describe 'relationships' do
-    it { should have_many :pets }
-  end
-
-  # describe "validations" do
-  #   it { should validate_presence_of :name }
-  # end
-  end
 end

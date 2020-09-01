@@ -109,17 +109,56 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       expect(page).to_not have_content(@pet_2.name)
     end
 
-    # At the top of the form, I can select from the pets of which I've favorited for which I'd like this application to apply towards (can be more than one)
-    # When I select one or more pets, and fill in my
-    # - Name
-    # - Address
-    # - City
-    # - State
-    # - Zip
-    # - Phone Number
-    # - Description of why I'd make a good home for this/these pet(s)
-    # And I click on a button to submit my application
-    # I see a flash message indicating my application went through for the pets that were selected
-    # And I'm taken back to my favorites page where I no longer see the pets for which I just applied listed as favorites
+    it "validate that all fields were filled out, if not there is a flash notice" do
+      visit "/pets/#{@pet_1.id}"
+      click_button "Add to Favorites"
+
+      visit "/pets/#{@pet_2.id}"
+      click_button "Add to Favorites"
+
+      visit "/pets/#{@pet_3.id}"
+      click_button "Add to Favorites"
+
+      visit "/favorites"
+
+      click_link "Adopt my favorite pets"
+
+      expect(page).to have_current_path "/favorites/pet_applications/new"
+
+      find(:css, "#favorites_[value='#{@pet_1.id}']").set(true)
+      find(:css, "#favorites_[value='#{@pet_2.id}']").set(true)
+
+      fill_in 'Name', with: 'Christopher'
+      fill_in 'Address', with: '1241 W Bayaud Ave'
+      fill_in 'City', with: 'Denver'
+      fill_in 'State', with: 'CO'
+      # fill_in 'Zip', with: '80223'
+      fill_in 'Phone number', with: '312-333-3333'
+      fill_in 'Description', with: 'I think I would be a good home because wob whon whonw wonw wown.'
+
+      click_on 'Submit'
+
+      expect(page).to have_content("Form Entry Error: fill in all fields in order to submit application")
+
+      expect(page).to have_current_path "/favorites/pet_applications"
+
+      find(:css, "#favorites_[value='#{@pet_1.id}']").set(true)
+      find(:css, "#favorites_[value='#{@pet_2.id}']").set(true)
+
+
+      fill_in 'Name', with: 'Christopher'
+      fill_in 'Address', with: '1241 W Bayaud Ave'
+      fill_in 'City', with: 'Denver'
+      fill_in 'State', with: 'CO'
+      fill_in 'Zip', with: '80223'
+      fill_in 'Phone number', with: '312-333-3333'
+      fill_in 'Description', with: 'I think I would be a good home because wob whon whonw wonw wown.'
+
+      click_on 'Submit'
+
+      expect(page).to have_current_path "/favorites"
+
+    end
+
 
   end
