@@ -4,4 +4,8 @@ class PetApplicationsController < ApplicationController
 
   end
 
+  def create
+
+  end
+
 end

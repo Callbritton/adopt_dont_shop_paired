@@ -1,5 +1,5 @@
 <!% Pet Applications New HTML Doc %>
-<% form_tag "/favorites", method: :create %>
+<% form_tag "favorites/pet_applications", method: :post %>
 <% favorites.pets_by_id.each do |pet| %>
         <li>
         <%= check_box_tag 'favorites[]', pet.id %>

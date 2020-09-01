@@ -98,9 +98,14 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       fill_in :good_home_answer, with: 'I think I would be a good home because wob whon whonw wonw wown.'
 
       click_on 'Submit'
+
+    expect(current_path).to eq('/favorites/pet_applications/new')
+    expect(page).not_to have_content ("#{@pet_1.name}")
+    expect(page).not_to have_content ("#{@pet_2.name}")
+    expect(page).to have_content("#{@pet_3.name}")
+    
       #
       # expect(page).to have_current_path "/shelters"
-      # expect(page).to have_content ('Denver Animal Shelter')
 
     end
 
