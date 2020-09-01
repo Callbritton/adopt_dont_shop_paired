@@ -89,6 +89,10 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       #FOR TESTS
       #checkout box for each pet
+      #** Take a look at these two ways to check boxes in Capybara **
+      page.check("favorites_", :match => :first)
+      find(:css, "#favorites_[value='#{@pet_2.id}']").set(true)
+
       fill_in 'Name', with: 'Christopher'
       fill_in 'Address', with: '1241 W Bayaud Ave'
       fill_in 'City', with: 'Denver'
@@ -98,12 +102,12 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       fill_in 'Description', with: 'I think I would be a good home because wob whon whonw wonw wown.'
 
       click_on 'Submit'
-      #
-      # expect(page).to have_current_path "/shelters"
-      # expect(page).to have_content ('Denver Animal Shelter')
 
+      expect(page).to have_current_path "/favorites"
+      expect(page).to have_content("Thank you for your application!")
+      expect(page).to_not have_content(@pet_1.name)
+      expect(page).to_not have_content(@pet_2.name)
     end
-
 
     # At the top of the form, I can select from the pets of which I've favorited for which I'd like this application to apply towards (can be more than one)
     # When I select one or more pets, and fill in my
