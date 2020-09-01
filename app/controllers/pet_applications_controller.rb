@@ -22,7 +22,12 @@ class PetApplicationsController < ApplicationController
 private
 
   def pet_applications_params
-    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description)
+    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description, :favorites)
   end
 
 end
+
+# 
+# pet_app.favorites.each do |favorite|
+#   link_to (Pet.find(favorite.to_i)).name
+# end
