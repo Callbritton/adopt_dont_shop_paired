@@ -4,13 +4,17 @@ class PetApplicationsController < ApplicationController
   end
 
   def create
-    pet_app = PetApplication.new(pet_applications_params)
+    pet_app = PetApplication.new(pet_applications_params
+    )
+
     if pet_app.save
-      pets = (params[:favorites])
-      pets.each do |pet|
-        integer_pet = pet.to_i
-        favorites.destroy_pet(integer_pet)
-      end
+      (params[:favorites]).map do |pet_id_str|
+          pet_app.pet_application_pet_ids << pet_id_str.to_i
+
+
+
+          favorites.destroy_pet(pet_id_str.to_i)
+        end
       redirect_to "/favorites"
       flash[:notice] = "Thank you for your application!"
     else
@@ -22,7 +26,7 @@ class PetApplicationsController < ApplicationController
 private
 
   def pet_applications_params
-    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description, :favorites)
+    params.permit(:name, :address, :city, :state, :zip, :phone_number, :description)
   end
 
 end
