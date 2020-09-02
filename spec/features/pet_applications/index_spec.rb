@@ -51,7 +51,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
 
     @pet_application_1 = @pet_3.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
-    require "pry"; binding.pry
+
     end
 
 
@@ -75,7 +75,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       click_on 'Submit'
 
-      expect(page).to have_current_path "/favorites/pet_applications"
+      expect(page).to have_current_path "/favorites"
 
 
     end
