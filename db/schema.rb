@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_221048) do
+ActiveRecord::Schema.define(version: 2020_09_02_000008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 2020_09_01_221048) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "pet_application_pets", force: :cascade do |t|
+    t.bigint "pet_id"
+    t.bigint "pet_application_id"
+    t.index ["pet_application_id"], name: "index_pet_application_pets_on_pet_application_id"
+    t.index ["pet_id"], name: "index_pet_application_pets_on_pet_id"
   end
 
   create_table "pet_applications", force: :cascade do |t|
@@ -75,6 +82,8 @@ ActiveRecord::Schema.define(version: 2020_09_01_221048) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "pet_application_pets", "pet_applications"
+  add_foreign_key "pet_application_pets", "pets"
   add_foreign_key "pets", "shelters"
   add_foreign_key "reviews", "shelters"
 end

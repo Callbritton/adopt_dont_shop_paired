@@ -4,13 +4,17 @@ class PetApplicationsController < ApplicationController
   end
 
   def create
-    pet_app = PetApplication.new(pet_applications_params)
+    pet_app = PetApplication.new(pet_applications_params
+    )
+
     if pet_app.save
-      pets = (params[:favorites])
-      pets.each do |pet|
-        integer_pet = pet.to_i
-        favorites.destroy_pet(integer_pet)
-      end
+      (params[:favorites]).map do |pet_id_str|
+        pet = pet_id_str.to_i
+
+          PetApplicationPet.create(pet_id: pet, pet_application_id: pet_app.id)
+
+          favorites.destroy_pet(pet_id_str.to_i)
+        end
       redirect_to "/favorites"
       flash[:notice] = "Thank you for your application!"
     else
@@ -19,6 +23,9 @@ class PetApplicationsController < ApplicationController
     end
   end
 
+  def index
+
+  end
 private
 
   def pet_applications_params
@@ -26,3 +33,8 @@ private
   end
 
 end
+
+#
+# pet_app.favorites.each do |favorite|
+#   link_to (Pet.find(favorite.to_i)).name
+# end

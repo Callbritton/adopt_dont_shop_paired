@@ -8,6 +8,8 @@
     <br>
     <br>
     <%= link_to "Adopt my favorite pets", "favorites/pet_applications/new" %>
+    <section class="favorite_pets">
+
     <% favorites.pets_by_id.each do |pet| %>
 
     <section class="favorite_pets-<%=pet.id%>">
@@ -18,4 +20,17 @@
       <% end %>
 
     </section>
+  </section>
+
 <% end %>
+<br>
+<section class="pet_application_pets">
+<h2> Pets with Applications </h2>
+
+  <% pets_with_applications.each do |pet| %>
+  <ul>
+    <h4><%= link_to pet.name, "/pets/#{pet.id}" %></h4>
+  </ul>
+  <% end %>
+
+</section>

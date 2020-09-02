@@ -316,7 +316,7 @@ And I'm taken back to my favorites page where I no longer see the pets for which
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 17, Incomplete application for a Pet
 
