@@ -10,9 +10,6 @@ class PetApplicationsController < ApplicationController
     if pet_app.save
       (params[:favorites]).map do |pet_id_str|
           pet_app.pet_application_pet_ids << pet_id_str.to_i
-
-
-
           favorites.destroy_pet(pet_id_str.to_i)
         end
       redirect_to "/favorites"
