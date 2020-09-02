@@ -5,7 +5,6 @@ class PetApplicationsController < ApplicationController
 
   def create
     pet_app = PetApplication.new(pet_applications_params)
-    require "pry"; binding.pry
     if pet_app.save
       pets = (params[:favorites])
       pets.each do |pet|
