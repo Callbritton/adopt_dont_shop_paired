@@ -7,7 +7,34 @@ BE Mod 2 Week 2/3 Pair Project
 
 Students will be put into pairs to complete the project.
 
+## The Contributors:
+
+### Christopher Allbritton
+Turing Student for BackEnd Engineering
+Mod 2
+Github: callbritton
+
+### Mariveliz Arique Aguilar, AKA: Arique
+Turing Student for BackEnd Engineering
+Mod 2
+Github: arique1104
+LinkedIn: https://www.linkedin.com/in/arique/
+
 ## Learning Goals
+### What went well
+- Worked together well, our driver/navigation work was good.
+- We were without conflict.
+- Successful in completing many to many relationships
+- Our git workflow was phenomenal, we made our edits, had our commits average out, and most importantly, we invited each other to author our own pull requests for pieces of user stories that we had authored. Made a conscious effort to make sure that credit was given where due with pull requests.
+- We built a website! And it's deployed to Heroku, and that's exciting!
+
+
+### Wish List
+- We would have liked to had completed more user stories, but were ultimately centering our learning for each section.
+- The things we got stuck on during production seemed to keep us in one story for far too long.  That was incredibly frustrating to us personally however, we demonstrated the grit and resolve necessary to complete them.
+
+
+
 
 ### Rails
 * Describe use cases for a model that inherits from ApplicationRecord vs. a PORO
@@ -335,7 +362,7 @@ And I see a flash message indicating that I must complete the form in order to s
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 18, List of Pets that have applications on them
 
@@ -347,7 +374,7 @@ Each pet's name is a link to their show page
 ```
 
 ```
-[ ] done
+[o] done
 
 User Story 19, Application Show Page
 
