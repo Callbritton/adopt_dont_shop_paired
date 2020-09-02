@@ -69,3 +69,7 @@ review1 = shelter_1.reviews.create!(optional_picture: "https://arbordayblog.org/
                               title: "Our First Review",
                               rating: "4",
                               content: "Best shelter I have ever been to")
+
+pet_application_1 = pet_1.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+
+pet_application_2 = pet_2.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
