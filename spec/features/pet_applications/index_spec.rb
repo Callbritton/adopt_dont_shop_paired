@@ -46,7 +46,6 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
     @pet_application_1.pet_application_pet_ids << @pet_1.id
     @pet_application_1.pet_application_pet_ids << @pet_2.id
-
     end
 
 
