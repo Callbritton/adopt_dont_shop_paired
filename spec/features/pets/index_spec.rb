@@ -14,7 +14,6 @@ RSpec.describe "pets index page", type: :feature do
                         approximate_age: 1,
                         sex: "male",
                         shelter: shelter_1)
-                        require "pry"; binding.pry
     visit "/pets"
 
     expect(page).to have_content(pet_1.name)
