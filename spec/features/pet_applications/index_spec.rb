@@ -40,43 +40,19 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       sex: "remale",
       adoption_status: "available"
     )
-    visit "/pets/#{@pet_1.id}"
-    click_button "Add to Favorites"
-
-    visit "/pets/#{@pet_2.id}"
-    click_button "Add to Favorites"
-
-    visit "/pets/#{@pet_3.id}"
-    click_button "Add to Favorites"
 
 
-    @pet_application_1 = @pet_3.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+    @pet_application_1 = PetApplication.new(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+
+    @pet_application_1.pet_application_pet_ids << @pet_1.id
+    @pet_application_1.pet_application_pet_ids << @pet_2.id
 
     end
 
 
     it "can create Active Record Files where the pet is available through the application and the application is available through the pet." do
-      visit "/favorites"
 
-      click_link "Adopt my favorite pets"
-
-      expect(page).to have_current_path "/favorites/pet_applications/new"
-
-      find(:css, "#favorites_[value='#{@pet_1.id}']").set(true)
-      find(:css, "#favorites_[value='#{@pet_2.id}']").set(true)
-
-      fill_in 'Name', with: 'Christopher'
-      fill_in 'Address', with: '1241 W Bayaud Ave'
-      fill_in 'City', with: 'Denver'
-      fill_in 'State', with: 'CO'
-      fill_in 'Zip', with: '80223'
-      fill_in 'Phone number', with: '312-333-3333'
-      fill_in 'Description', with: 'I think I would be a good home because wob whon whonw wonw wown.'
-
-      click_on 'Submit'
-
-      expect(page).to have_current_path "/favorites"
-
+      expect(@pet_application_1.pet_application_pet_ids).to eq([@pet_1.id, @pet_2.id])
 
     end
   end
