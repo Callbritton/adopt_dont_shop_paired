@@ -11,10 +11,6 @@ class FavoritesController < ApplicationController
 
   def index
     favorites
-    @pets = PetApplicationPet.all
-    require "pry"; binding.pry
-    @pet_applications = @pets.map do |pet|
-    end
   end
 
   def destroy

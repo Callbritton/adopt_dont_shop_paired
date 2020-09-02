@@ -9,7 +9,10 @@ class PetApplicationsController < ApplicationController
 
     if pet_app.save
       (params[:favorites]).map do |pet_id_str|
-          pet_app.pet_application_pet_ids << pet_id_str.to_i
+        pet = pet_id_str.to_i
+
+          PetApplicationPet.create(pet_id: pet, pet_application_id: pet_app.id)
+
           favorites.destroy_pet(pet_id_str.to_i)
         end
       redirect_to "/favorites"
@@ -19,7 +22,7 @@ class PetApplicationsController < ApplicationController
       render :new
     end
   end
-  
+
   def index
 
   end

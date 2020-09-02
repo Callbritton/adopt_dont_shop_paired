@@ -42,14 +42,17 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
     )
 
 
-    @pet_application_1 = @pet_1.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
-    @pet_application_2 = @pet_3.pet_applications.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+    @pet_application_1 = PetApplication.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+
+    @pet_application_2 = PetApplication.create!(name: "Maribel", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
+
+    PetApplicationPet.create!(pet_id: @pet_1.id, pet_application_id: @pet_application_1.id)
+    PetApplicationPet.create!(pet_id: @pet_2.id, pet_application_id: @pet_application_2.id)
+
   end
 
 
     it "can create Active Record Files where the pet is available through the application and the application is available through the pet." do
-
-      expect(@pet_application_1.pets).to eq(@pet_1)
 
 # User Story 18, List of Pets that have applications on them
 #

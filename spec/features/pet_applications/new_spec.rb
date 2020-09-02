@@ -105,8 +105,10 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       expect(page).to have_current_path "/favorites"
       expect(page).to have_content("Thank you for your application!")
-      expect(page).to_not have_content(@pet_1.name)
-      expect(page).to_not have_content(@pet_2.name)
+      within ".favorite_pets" do
+        expect(page).to_not have_content(@pet_1.name)
+        expect(page).to_not have_content(@pet_2.name)
+      end
     end
 
     it "validate that all fields were filled out, if not there is a flash notice" do
