@@ -9,11 +9,6 @@ RSpec.describe "pets index page", type: :feature do
                                 state: "WY",
                                 zip: 12345)
 
-    # pet_1 = Pet.create!(image: "",
-    #                     name: "Waylon",
-    #                     approximate_age: 1,
-    #                     sex: "male",
-    #                     shelter: shelter_1)
     pet_1 = shelter_1.pets.create!(image: "",
                         name: "Waylon",
                         approximate_age: 1,
