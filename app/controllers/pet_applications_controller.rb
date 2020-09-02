@@ -24,8 +24,12 @@ class PetApplicationsController < ApplicationController
   end
 
   def index
-
   end
+
+  def show
+    @pet_application = PetApplication.find(params[:pet_application_id])
+  end
+
 private
 
   def pet_applications_params
