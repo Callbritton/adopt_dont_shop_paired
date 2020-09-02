@@ -19,7 +19,10 @@ class PetApplicationsController < ApplicationController
       render :new
     end
   end
+  
+  def index
 
+  end
 private
 
   def pet_applications_params
