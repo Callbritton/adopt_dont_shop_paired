@@ -1,12 +1,5 @@
 require "rails_helper"
 
-# User Story 8, Favorite Indicator
-#
-# As a visitor
-# I see a favorite indicator in my navigation bar
-# The favorite indicator shows a count of pets in my favorites list
-# I can see this favorite indicator from any page in the application
-
 RSpec.describe "Favorites" do
   before :each do
     @shelter_1 = Shelter.create(
@@ -40,4 +33,4 @@ RSpec.describe "Favorites" do
     visit "/shelters/#{@shelter_1.id}"
     expect(page).to have_content('Favorites: 0')
   end
-end 
+end

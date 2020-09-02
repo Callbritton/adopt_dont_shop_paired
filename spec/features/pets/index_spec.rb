@@ -10,10 +10,10 @@ RSpec.describe "pets index page", type: :feature do
                                 zip: 12345)
 
     pet_1 = shelter_1.pets.create!(image: "",
-                        name: "Waylon",
-                        approximate_age: 1,
-                        sex: "male",
-                        shelter: shelter_1)
+                                   name: "Waylon",
+                                   approximate_age: 1,
+                                   sex: "male",
+                                   shelter: shelter_1)
     visit "/pets"
 
     expect(page).to have_content(pet_1.name)
@@ -26,13 +26,11 @@ RSpec.describe "pets index page", type: :feature do
                                 state: "WY",
                                 zip: 12345)
 
-    pet_1 = shelter_1.pets.create(
-      image: "http://cdn.akc.org/content/article-body-image/golden_puppy_dog_pictures.jpg",
-      name: "Duke",
-      description: "Gentle lab that loves kids",
-      approximate_age: 9,
-      sex: "male"
-    )
+    pet_1 = shelter_1.pets.create(image: "http://cdn.akc.org/content/article-body-image/golden_puppy_dog_pictures.jpg",
+                                  name: "Duke",
+                                  description: "Gentle lab that loves kids",
+                                  approximate_age: 9,
+                                  sex: "male")
 
     visit "/pets"
     expect(page).to have_link("Update Pet", href: "/pets/#{pet_1.id}/edit")

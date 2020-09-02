@@ -3,9 +3,9 @@ class Pet < ApplicationRecord
   has_many :pet_application_pets
   has_many :pet_applications, through: :pet_application_pets
 
-  after_initialize :set_defaults
-
   validates_presence_of :name, :approximate_age, :sex
+
+  after_initialize :set_defaults
 end
 
 

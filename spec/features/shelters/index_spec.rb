@@ -3,15 +3,15 @@ RSpec.describe 'Shelters index page' do
   before :each do
 
     @shelter_1 = Shelter.create!(name: "Willy's Animal Center",
-                          address: "2020 Whirlwind Dr",
-                          city: "Denver",
-                          state: "CO",
-                          zip: 80014)
+                                 address: "2020 Whirlwind Dr",
+                                 city: "Denver",
+                                 state: "CO",
+                                 zip: 80014)
     @shelter_2 = Shelter.create!(name: "Sue's Shelter",
-                          address: "4478 Wandering St",
-                          city: "Timbucktoo",
-                          state: "NV",
-                          zip: 76890)
+                                 address: "4478 Wandering St",
+                                 city: "Timbucktoo",
+                                 state: "NV",
+                                 zip: 76890)
   end
 
   describe 'it in more details' do

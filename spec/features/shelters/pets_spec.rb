@@ -14,8 +14,7 @@ RSpec.describe 'Shelter show page', type: :feature do
       @pet_1 = @shelter_1.pets.create!(image: '',
                                    name: 'Waylon',
                                    approximate_age: 1,
-                                   sex: 'male',
-                                   )
+                                   sex: 'male')
     end
 
     it 'can update or delete pets from the shelter show pets page' do

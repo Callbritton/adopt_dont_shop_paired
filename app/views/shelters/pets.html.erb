@@ -1,8 +1,10 @@
 <h1>All Pets at This Shelter</h1>
+
 <a href="/shelters">Return to Shelters Index</a>
 <br>
 <br>
 <%= link_to 'Create Pet', "/shelters/#{@shelter.id}/pets/new"%>
+
 <% @pets.each do |pet| %>
   <h2><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h2>
   <p><%= image_tag pet.image, width: 250 %></p>

@@ -1,12 +1,3 @@
-
-# User Story 16, Applying for a Pet
-#
-# As a visitor
-# When I have added pets to my favorites list
-# And I visit my favorites page ("/favorites")
-# I see a link for adopting my favorited pets
-# When I click that link I'm taken to a new application form
-
 require 'rails_helper'
 
 RSpec.describe "When I visit '/favorites'", type: :feature do
@@ -87,9 +78,6 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
       expect(page).to have_current_path "/favorites/pet_applications/new"
 
-      #FOR TESTS
-      #checkout box for each pet
-      #** Take a look at these two ways to check boxes in Capybara **
       page.check("favorites_", :match => :first)
       find(:css, "#favorites_[value='#{@pet_2.id}']").set(true)
 
@@ -134,7 +122,7 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       fill_in 'Address', with: '1241 W Bayaud Ave'
       fill_in 'City', with: 'Denver'
       fill_in 'State', with: 'CO'
-      # fill_in 'Zip', with: '80223'
+      # fill_in 'Zip', with: '80223' - this is the field that is skipped
       fill_in 'Phone number', with: '312-333-3333'
       fill_in 'Description', with: 'I think I would be a good home because wob whon whonw wonw wown.'
 
@@ -161,8 +149,4 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
       expect(page).to have_current_path "/favorites"
 
     end
-
-
-
-
   end

@@ -54,19 +54,10 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
     it "can create Active Record Files where the pet is available through the application and the application is available through the pet." do
 
-# User Story 18, List of Pets that have applications on them
-#
-# As a visitor
-# After one or more applications have been created
-# When I visit the favorites index page
-# I see a section on the page that has a list of all of the pets that have at least one application on them
-# Each pet's name is a link to their show page
       visit "/favorites/index"
       within ".pet_application_pets" do
         expect(page).to have_content("#{@pet_1.name}")
         expect(page).to have_content("#{@pet_2.name}")
-
       end
-
     end
   end
