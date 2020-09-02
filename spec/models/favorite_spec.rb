@@ -27,7 +27,5 @@ RSpec.describe Favorite do
       favorite.add_pet(@pet_1)
       expect(favorite.total_count).to eq(2)
     end
-
   end
-
 end

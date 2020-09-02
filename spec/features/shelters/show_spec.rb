@@ -12,11 +12,9 @@ RSpec.describe 'Shelter show page', type: :feature do
 
 
       @pet_1 = @shelter_1.pets.create!(image: '',
-                                   name: 'Waylon',
-                                   approximate_age: 1,
-                                   sex: 'male',
-                                   )
-
+                                       name: 'Waylon',
+                                       approximate_age: 1,
+                                       sex: 'male')
     end
 
 

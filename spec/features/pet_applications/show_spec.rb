@@ -44,20 +44,12 @@ RSpec.describe "When I visit '/favorites'", type: :feature do
 
     @pet_application_1 = PetApplication.create!(name: "Wilmer", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
 
-    @pet_application_2 = PetApplication.create!(name: "Maribel", address: "123 Fake Street", city: "Choco", state: "CO", zip: "80016", phone_number: "1234567", description: "I think I would make a create big brother!")
-
     PetApplicationPet.create!(pet_id: @pet_1.id, pet_application_id: @pet_application_1.id)
-    PetApplicationPet.create!(pet_id: @pet_2.id, pet_application_id: @pet_application_2.id)
-
   end
 
+  it "When I visit an applications show page '/applications/:id' I can see pet_application's attributes" do
+    visit "/pet_applications/#{@pet_application_1.id}"
 
-    it "can create Active Record Files where the pet is available through the application and the application is available through the pet." do
-
-      visit "/favorites/index"
-      within ".pet_application_pets" do
-        expect(page).to have_content("#{@pet_1.name}")
-        expect(page).to have_content("#{@pet_2.name}")
-      end
-    end
+    expect(page).to have_content(@pet_application_1.name)
   end
+end

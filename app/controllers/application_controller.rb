@@ -12,6 +12,5 @@ class ApplicationController < ActionController::Base
         pet
       end
     end
-
   end
 end

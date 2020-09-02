@@ -2,21 +2,19 @@ require 'rails_helper'
 
 RSpec.describe "creating a new pet" do
   it "can create a pet" do
-    shelter_1 = Shelter.create!(
-                          name: "Willy's Animal Center",
-                          address: "2020 Whirlwind Dr",
-                          city: "Denver",
-                          state: "CO",
-                          zip: 80014)
+    shelter_1 = Shelter.create!(name: "Willy's Animal Center",
+                                address: "2020 Whirlwind Dr",
+                                city: "Denver",
+                                state: "CO",
+                                zip: 80014)
     image = ""
     name = "Waylon"
     description = "1 year old rottie puppy"
     approximate_age = 1
     sex = "male"
-    # When I visit the shelter pets index page to create a new pet as a nested resource
-    # With the path:  '/shelters/:shelter_id/pets/new'
+
     visit "/shelters/#{shelter_1.id}/pets/new"
-    # Then there is a form to add the name, description, and approximate_age
+
     fill_in :image, with: image
     fill_in :name, with: name
     fill_in :description, with: description
@@ -26,7 +24,7 @@ RSpec.describe "creating a new pet" do
     click_on "Create Pet"
 
     new_pet = Pet.last
-    # And the page displays that pets with name, description, and approximate_age
+
     expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
     expect(page).to have_content(new_pet.approximate_age)
     expect(page).to have_content(new_pet.image)

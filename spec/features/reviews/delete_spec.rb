@@ -23,22 +23,20 @@ RSpec.describe 'As a visitor' do
       optional_picture: "")
     end
 
-    describe "When I visit a shelter's show page, I see a link next to each shelter review to delete the review." do
-        it "When I delete a shelter review I am returned to the shelter's show page" do
-          visit "shelters/#{@shelter_1.id}"
+  describe "When I visit a shelter's show page, I see a link next to each shelter review to delete the review." do
+    it "When I delete a shelter review I am returned to the shelter's show page" do
+      visit "shelters/#{@shelter_1.id}"
 
-          expect(page).to have_content("#{@review_1.title}")
+      expect(page).to have_content("#{@review_1.title}")
 
-            within ".reviews-#{@review_1.id}" do
-              expect(page).to have_link("Delete Review")
-            end
-
-            within ".reviews-#{@review_1.id}" do
-              click_on 'Delete Review'
-            end
-          expect(page).to_not have_content("#{@review_1.title}")
-
-
+      within ".reviews-#{@review_1.id}" do
+        expect(page).to have_link("Delete Review")
       end
+
+      within ".reviews-#{@review_1.id}" do
+        click_on 'Delete Review'
+      end
+      expect(page).to_not have_content("#{@review_1.title}")
     end
+  end
 end

@@ -4,8 +4,7 @@ class PetApplicationsController < ApplicationController
   end
 
   def create
-    pet_app = PetApplication.new(pet_applications_params
-    )
+    pet_app = PetApplication.new(pet_applications_params)
 
     if pet_app.save
       (params[:favorites]).map do |pet_id_str|
@@ -24,8 +23,12 @@ class PetApplicationsController < ApplicationController
   end
 
   def index
-
   end
+
+  def show
+    @pet_application = PetApplication.find(params[:pet_application_id])
+  end
+
 private
 
   def pet_applications_params
@@ -33,8 +36,3 @@ private
   end
 
 end
-
-#
-# pet_app.favorites.each do |favorite|
-#   link_to (Pet.find(favorite.to_i)).name
-# end
